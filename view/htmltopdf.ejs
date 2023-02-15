@@ -1,0 +1,52 @@
+<!-- requestADemoModel -->
+    <table width="50%">
+
+        <tr>
+            <th>Name </th>
+            <th>Email </th>
+            <th>Phone </th>
+            <th>Company </th>
+        </tr>
+
+        <!-- <% 
+            if(requestADemoModel.length > 0){
+                for(let i=0; i<requestADemoModel.length;i++){
+                    %>
+                        <tr>
+                                <td>
+                                    <%=requestADemoModel[0].name%>
+                                </td>
+                                <td>
+                                    <%=requestADemoModel[0].email%>
+                                </td>
+                                <td>
+                                    <%=requestADemoModel[0].mobile%>
+                                </td>
+                                <td>
+                                    <%=requestADemoModel[0].company%>
+                                </td>
+                        </tr>
+                    <%
+                    } 
+            }
+            else{
+                    %>
+                    <tr>
+                        <td colspan="5" >requestADemoModel not found</td>
+                    </tr>
+                    <% 
+            } 
+        %> -->
+        <tbody>
+            <% requestADemoModel.forEach(function(data) { %>
+                <tr>
+                  <td><%= data.name %></td>
+                  <td><%= data.email %></td> 
+
+                  <td><%= data.phone %></td> 
+                  <td><%= data.company %></td> 
+                </tr>
+              <% }); %> 
+            </tbody>
+
+    </table>

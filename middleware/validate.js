@@ -7,6 +7,8 @@ const requestADemoValidate = (data) => {
         phone: Joi.number().min(10).required(),
         company: Joi.string(),
 
+        agree: Joi.boolean().required()
+
     });
     return schema.validate(data);
 };

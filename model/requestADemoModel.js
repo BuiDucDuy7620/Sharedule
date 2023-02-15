@@ -17,6 +17,10 @@ const RequestADemoSchema = new Schema({
     company: {
         type: String,
         default: ""
+    },
+    agree:{
+        type:Boolean,
+        required:true
     }
 });
 module.exports = mongoose.model("RequestADemo", RequestADemoSchema);
